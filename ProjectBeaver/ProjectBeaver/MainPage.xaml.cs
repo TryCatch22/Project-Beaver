@@ -19,12 +19,14 @@ namespace ProjectBeaver
 	{
 		private Map map;
         private IList<Tree> trees;
+        private BikePaths bikePaths;
 
 		// Constructor
 		public MainPage()
 		{
 			InitializeComponent();
 
+            bikePaths = new BikePaths();
             trees = Tree.ParseCsv();
 
 			map = new Map();
@@ -39,6 +41,8 @@ namespace ProjectBeaver
 			pin1.Location = mapCenter;
 			pin1.Content = "McGill University";
 			map.Children.Add(pin1);
+
+            bikePaths.AddPathsToMap(map);
 
 			// Set the map style to Aerial
 			map.Mode = new Microsoft.Phone.Controls.Maps.AerialMode();
