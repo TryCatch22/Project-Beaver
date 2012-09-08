@@ -12,6 +12,7 @@ using System.Windows.Shapes;
 using Microsoft.Phone.Controls;
 using Microsoft.Phone.Controls.Maps;
 using System.Device.Location;
+using Microsoft.Phone.Controls.Maps.Platform;
 
 namespace ProjectBeaver
 {
@@ -71,10 +72,29 @@ namespace ProjectBeaver
 
 			foreach (Tree tree in trees)
 			{
+				MapPolygon point = new MapPolygon();
+				point.Stroke = new SolidColorBrush(Colors.White);
+				point.Fill = new SolidColorBrush(Colors.Green);
+				point.Opacity = 0.7f;
+				Location location1 = new Location() { Latitude = tree.Coordinates.X - 0.0001, Longitude = tree.Coordinates.Y - 0.00006 };
+				Location location2 = new Location() { Latitude = tree.Coordinates.X + 0.0001, Longitude = tree.Coordinates.Y - 0.00006 };
+				Location location3 = new Location() { Latitude = tree.Coordinates.X + 0.0001, Longitude = tree.Coordinates.Y + 0.00006 };
+				Location location4 = new Location() { Latitude = tree.Coordinates.X - 0.0001, Longitude = tree.Coordinates.Y + 0.00006 };
+				LocationCollection locations = new LocationCollection();
+				locations.Add(location1);
+				locations.Add(location2);
+				locations.Add(location3);
+				locations.Add(location4);
+				point.Locations = locations;
+
+				map.Children.Add(point);
+
+				/*
 				Pushpin pin = new Pushpin();
 				pin.Location = new GeoCoordinate(tree.Coordinates.X, tree.Coordinates.Y);
 				pin.Content = name;
 				map.Children.Add(pin);
+				 * */
 			}
 
 			NavigationService.GoBack();
