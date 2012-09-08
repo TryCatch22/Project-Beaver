@@ -121,7 +121,7 @@ namespace ProjectBeaver
 
 			IsolatedStorageFile isf = IsolatedStorageFile.GetUserStoreForApplication();
 
-			using (StreamReader file = new StreamReader(isf.OpenFile("TreeData.csv", FileMode.Open, FileAccess.Read)))
+			using (StreamReader file = new StreamReader(new IsolatedStorageFileStream("TreeData.csv", FileMode.Open, FileAccess.Read, FileShare.Read, isf)))
 			{
 				string line;
 				Tree newTree;

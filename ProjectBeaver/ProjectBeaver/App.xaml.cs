@@ -15,6 +15,8 @@ using Microsoft.Phone.Shell;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
+using System.IO.IsolatedStorage;
+using System.IO;
 
 namespace ProjectBeaver
 {
@@ -83,6 +85,18 @@ namespace ProjectBeaver
 		// This code will not execute when the application is reactivated
 		private void Application_Launching(object sender, LaunchingEventArgs e)
 		{
+			IsolatedStorageFile isf = IsolatedStorageFile.GetUserStoreForApplication();
+
+			StreamReader reader = new StreamReader(Application.GetResourceStream(new Uri("./Data/TreeData.csv", UriKind.Relative)).Stream);
+			StreamWriter writer = new StreamWriter(new IsolatedStorageFileStream("TreeData.csv", FileMode.Create, FileAccess.Write, FileShare.Write, isf));
+
+			while (!reader.EndOfStream)
+			{
+				writer.WriteLine(reader.ReadLine());
+			}
+
+			reader.Close();
+			writer.Close();
 		}
 
 		// Code to execute when the application is activated (brought to foreground)
