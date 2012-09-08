@@ -7,4 +7,4 @@ TestResults
 
 # misc
 *.suo
-ProjectBeaver.ProjectBeaver.ProjectBeaver.csproj.user
+*.user
