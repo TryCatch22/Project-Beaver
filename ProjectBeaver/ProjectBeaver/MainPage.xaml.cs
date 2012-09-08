@@ -16,10 +16,13 @@ namespace ProjectBeaver
 {
 	public partial class MainPage : PhoneApplicationPage
 	{
+        private IList<Tree> trees;
+
 		// Constructor
 		public MainPage()
 		{
 			InitializeComponent();
+            trees = Tree.ParseCsv("L2P_0_UCOUTGU_801_26062012_111306_GLC_3211912_VILLEMARIE.csv");
 		}
 
 		// Simple button Click event handler to take us to the second page
