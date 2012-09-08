@@ -1,13 +1,16 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 using System.Net;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Documents;
-using System.Windows.Ink;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Animation;
 using System.Windows.Shapes;
+using Microsoft.Phone.Controls;
+using Microsoft.Phone.Controls.Maps;
 
 namespace ProjectBeaver
 {
@@ -72,5 +75,15 @@ namespace ProjectBeaver
         public string ParkName { get; set; }
         public int SectorCode { get; set; }
         public string SectorName { get; set; }
+
+        public static IList<Tree> ParseCsv(string filename)
+        {
+            List<Tree> trees = new List<Tree>();
+
+
+
+            return trees;
+        }
+
     }
 }
