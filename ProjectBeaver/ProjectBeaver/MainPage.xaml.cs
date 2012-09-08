@@ -27,7 +27,7 @@ namespace ProjectBeaver
 
 			// Set the center coordinate and zoom level
 			GeoCoordinate mapCenter = new GeoCoordinate(45.504693, -73.576494);
-			int zoom = 15;
+			int zoom = 14;
 
 			// Create a pushpin to put at the center of the view
 			Pushpin pin1 = new Pushpin();
