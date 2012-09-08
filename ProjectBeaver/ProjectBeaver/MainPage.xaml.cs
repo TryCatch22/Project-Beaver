@@ -19,14 +19,13 @@ namespace ProjectBeaver
 	{
 		private Map map;
         private IList<Tree> trees;
-		private FindTreePage findTreePage;
 
 		// Constructor
 		public MainPage()
 		{
 			InitializeComponent();
 
-            trees = Tree.ParseCsv("Data\\L2P_0_UCOUTGU_801_26062012_111306_GLC_3211912_VILLEMARIE.csv");
+            trees = Tree.ParseCsv();
 
 			map = new Map();
 			map.CredentialsProvider = new ApplicationIdCredentialsProvider("Atvj6eBBbDS6-dL7shp9KmzY-0v0NL2ETYCFoHIDzQwK8_9bJ2ZdRgeMAj0sDs_F");
