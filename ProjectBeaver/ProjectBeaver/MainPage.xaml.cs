@@ -10,6 +10,7 @@ using System.Windows.Media;
 using System.Windows.Media.Animation;
 using System.Windows.Shapes;
 using Microsoft.Phone.Controls;
+using Microsoft.Phone.Controls.Maps;
 
 namespace ProjectBeaver
 {
@@ -26,5 +27,29 @@ namespace ProjectBeaver
 		{
 			NavigationService.Navigate(new Uri("/GamePage.xaml", UriKind.Relative));
 		}
+
+		private void buttonRoad_Click(object sender, RoutedEventArgs e)
+		{
+			map1.Mode = new RoadMode();
+		}
+		
+		private void buttonAerial_Click(object sender, RoutedEventArgs e)
+		{
+			map1.Mode = new AerialMode();
+		}
+
+		private void buttonZoomIn_Click(object sender, RoutedEventArgs e)
+		{
+			double zoom;
+			zoom = map1.ZoomLevel;
+			map1.ZoomLevel = ++zoom;
+		}
+
+		private void buttonZoomOut_Click(object sender, RoutedEventArgs e)
+		{
+			double zoom;
+			zoom = map1.ZoomLevel;
+			map1.ZoomLevel = --zoom;
+		}		
 	}
 }
