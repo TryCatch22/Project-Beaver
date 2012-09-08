@@ -100,9 +100,9 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Data\L2P_0_UCOUTGU_801_26062012_111306_GLC_3211912_VILLEMARIE.csv">
+    <Content Include="Data\TreeData.csv">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
+    </Content>
     <None Include="Properties\AppManifest.xml" />
     <None Include="Properties\WMAppManifest.xml" />
   </ItemGroup>
