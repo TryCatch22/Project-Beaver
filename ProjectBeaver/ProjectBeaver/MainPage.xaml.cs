@@ -99,5 +99,10 @@ namespace ProjectBeaver
 
 			NavigationService.GoBack();
 		}
+
+		private void button2_Click(object sender, RoutedEventArgs e)
+		{
+			bikePaths.AddPathsToMap(map);
+		}
 	}
 }

@@ -30,7 +30,8 @@
         <Grid x:Name="ContentPanel" Margin="0,136,0,78" Grid.RowSpan="2">
             <!--Create a single button to navigate to the second page which is rendered with the XNA Framework-->
         </Grid>
-        <Button Content="Find Trees" Grid.Row="1" Height="72" HorizontalAlignment="Center" Margin="0,578,0,0" Name="button1" VerticalAlignment="Top" Width="180" Click="button1_Click" />
+        <Button Content="Find Trees" Grid.Row="1" Height="72" HorizontalAlignment="Center" Margin="12,578,288,0" Name="button1" VerticalAlignment="Top" Width="180" Click="button1_Click" />
+        <Button Content="Show Bike Paths" Grid.Row="1" Height="72" HorizontalAlignment="Left" Margin="220,578,0,0" Name="button2" VerticalAlignment="Top" Width="260" Click="button2_Click" />
     </Grid>
 
     <!--Sample code showing usage of ApplicationBar-->

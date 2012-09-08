@@ -5,7 +5,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProjectBeaver", "ProjectBea
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProjectBeaverLib", "ProjectBeaver\ProjectBeaverLib\ProjectBeaverLib.csproj", "{48B1C18A-2DB8-4C77-821A-CE7A01BFED81}"
 EndProject
-Project("{96E2B04D-8817-42C6-938A-82C39BA4D311}") = "ProjectBeaverLibContent", "ProjectBeaver\ProjectBeaverLibContent\ProjectBeaverLibContent.contentproj", "{8FE34D59-1FE9-454F-A45A-D01E63368869}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProjectBeaverLibContent", "ProjectBeaver\ProjectBeaverLibContent\ProjectBeaverLibContent.contentproj", "{8FE34D59-1FE9-454F-A45A-D01E63368869}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

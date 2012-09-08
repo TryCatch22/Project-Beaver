@@ -29,19 +29,19 @@
         <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
             <ScrollViewer HorizontalAlignment="Left" Name="TreeScrollViewer" VerticalAlignment="Top" Width="450" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Visible">
                 <StackPanel HorizontalAlignment="Left" Name="TreeStackPanel" VerticalAlignment="Top" Width="450">
-                    <Button Content="Norway Maple" Height="71" Name="FindNorwayMaples" Width="300" Click="FindNorwayMaples_Click" />
-                    <Button Content="Homestead Elm" Height="71" Name="FindHomesteadElms" Width="300" Click="FindHomesteadElms_Click" />
-                    <Button Content="Common Hackberry" Height="71" Name="button3" Width="300" Click="button3_Click" />
-                    <Button Content="Button" Height="71" Name="button4" Width="300" />
-                    <Button Content="Button" Height="71" Name="button5" Width="300" />
-                    <Button Content="Button" Height="71" Name="button6" Width="300" />
-                    <Button Content="Button" Height="71" Name="button7" Width="300" />
-                    <Button Content="Button" Height="71" Name="button8" Width="300" />
-                    <Button Content="Button" Height="71" Name="button9" Width="300" />
-                    <Button Content="Button" Height="71" Name="button10" Width="300" />
-                    <Button Content="Button" Height="71" Name="button11" Width="300" />
-                    <Button Content="Button" Height="71" Name="button12" Width="300" />
-                    <Button Content="Button" Height="71" Name="button13" Width="300" />
+                    <Button Content="Norway Maple" Height="71" Name="FindNorwayMaples" Width="350" Click="FindNorwayMaples_Click" />
+                    <Button Content="Homestead Elm" Height="71" Name="FindHomesteadElms" Width="350" Click="FindHomesteadElms_Click" />
+                    <Button Content="Common Hackberry" Height="71" Name="button3" Width="350" Click="button3_Click" />
+                    <Button Content="Skyline Honey Locust" Height="71" Name="button4" Width="350" />
+                    <Button Content="Makamik Crab Apple" Height="71" Name="button5" Width="350" />
+                    <Button Content="Pioneer Elm" Height="71" Name="button6" Width="350" />
+                    <Button Content="Kentucky Coffee Tree" Height="71" Name="button7" Width="350" />
+                    <Button Content="Silver Maple" Height="71" Name="button8" Width="350" />
+                    <Button Content="Summit Red Ash" Height="71" Name="button9" Width="350" />
+                    <Button Content="Maidenhair Tree" Height="71" Name="button10" Width="350" />
+                    <Button Content="Park Royal Siberian Elm" Height="71" Name="button11" Width="350" />
+                    <Button Content="Autumn Blaze Freeman Maple" Height="71" Name="button12" Width="350" />
+                    <Button Content="Marshall Seedless Red Ash" Height="71" Name="button13" Width="350" />
                 </StackPanel>
             </ScrollViewer>
         </Grid>
