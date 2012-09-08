@@ -27,9 +27,10 @@
         </StackPanel>
 
         <!--ContentPanel - place additional content here-->
-        <Grid x:Name="ContentPanel" Margin="0,136,0,0" Grid.RowSpan="2">
+        <Grid x:Name="ContentPanel" Margin="0,136,0,78" Grid.RowSpan="2">
             <!--Create a single button to navigate to the second page which is rendered with the XNA Framework-->
         </Grid>
+        <Button Content="Find Trees" Grid.Row="1" Height="72" HorizontalAlignment="Center" Margin="0,578,0,0" Name="button1" VerticalAlignment="Top" Width="180" Click="button1_Click" />
     </Grid>
 
     <!--Sample code showing usage of ApplicationBar-->
