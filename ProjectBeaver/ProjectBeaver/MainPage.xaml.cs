@@ -23,11 +23,8 @@ namespace ProjectBeaver
 		public MainPage()
 		{
 			InitializeComponent();
-<<<<<<< HEAD
+
             trees = Tree.ParseCsv("L2P_0_UCOUTGU_801_26062012_111306_GLC_3211912_VILLEMARIE.csv");
-		}
-=======
->>>>>>> 24a57eaa9e145320d6ee289e76915fdae64e0e5d
 
 			Map map = new Map();
 			map.CredentialsProvider = new ApplicationIdCredentialsProvider("Atvj6eBBbDS6-dL7shp9KmzY-0v0NL2ETYCFoHIDzQwK8_9bJ2ZdRgeMAj0sDs_F");
