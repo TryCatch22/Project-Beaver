@@ -119,27 +119,16 @@ namespace ProjectBeaver
         {
             List<Tree> trees = new List<Tree>();
 
-            // Obtain an isolated store
-            try
+            // Read the contents of the tree data file
+            using (StreamReader file = new StreamReader(Application.GetResourceStream(new Uri(filename)).Stream))
             {
-                using (var store = IsolatedStorageFile.GetUserStoreForApplication())
+                string line;
+                Tree newTree;
+                while ((line = file.ReadLine()) != null)
                 {
-                    // Read the contents of the tree data file
-                    using (StreamReader file = new StreamReader(store.OpenFile(filename, FileMode.Open, FileAccess.Read)))
-                    {
-                        string line;
-                        Tree newTree;
-                        while ((line = file.ReadLine()) != null)
-                        {
-                            newTree = new Tree(line.Split(';'));
-                            trees.Add(newTree);
-                        }
-                    }
+                    newTree = new Tree(line.Split(';'));
+                    trees.Add(newTree);
                 }
-            }
-            catch (IsolatedStorageException)
-            {
-                // Handle that store was unable to be accessed. (maybe)
             }
 
             return trees;
