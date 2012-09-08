@@ -85,6 +85,8 @@ namespace ProjectBeaver
 		// This code will not execute when the application is reactivated
 		private void Application_Launching(object sender, LaunchingEventArgs e)
 		{
+			// Prolly useless
+			/*
 			IsolatedStorageFile isf = IsolatedStorageFile.GetUserStoreForApplication();
 
 			StreamReader reader = new StreamReader(Application.GetResourceStream(new Uri("./Data/TreeData.csv", UriKind.Relative)).Stream);
@@ -97,6 +99,7 @@ namespace ProjectBeaver
 
 			reader.Close();
 			writer.Close();
+			 * */
 		}
 
 		// Code to execute when the application is activated (brought to foreground)
