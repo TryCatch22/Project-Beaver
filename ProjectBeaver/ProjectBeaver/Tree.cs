@@ -159,7 +159,7 @@ namespace ProjectBeaver
                 Tree newTree;
                 while ((line = file.ReadLine()) != null)
                 {
-                    newTree = new Tree(line.Split(';'));
+                    newTree = new Tree(line.Split(','));
                     trees.Add(newTree);
                 }
             }
