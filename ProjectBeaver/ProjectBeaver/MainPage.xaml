@@ -11,30 +11,33 @@
     FontSize="{StaticResource PhoneFontSizeNormal}"
     Foreground="{StaticResource PhoneForegroundBrush}"
     SupportedOrientations="Portrait" Orientation="Portrait"
-    shell:SystemTray.IsVisible="False">
+    shell:SystemTray.IsVisible="False" xmlns:my="clr-namespace:Microsoft.Phone.Controls.Maps;assembly=Microsoft.Phone.Controls.Maps">
 
     <!--LayoutRoot is the root grid where all page content is placed-->
     <Grid x:Name="LayoutRoot" Background="Transparent">
         <Grid.RowDefinitions>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="*"/>
+            <RowDefinition Height="150"/>
+            <RowDefinition Height="650*"/>
         </Grid.RowDefinitions>
 
         <!--TitlePanel contains the name of the application and page title-->
-        <StackPanel x:Name="TitlePanel" Grid.Row="0" Margin="12,17,0,28">
+        <StackPanel x:Name="TitlePanel" Grid.Row="0" Margin="0,0,0,20">
             <TextBlock x:Name="ApplicationTitle" Text="PROJECT BEAVER" Style="{StaticResource PhoneTextNormalStyle}"/>
-            <TextBlock x:Name="PageTitle" Text="Treeeeees" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}"/>
+            <TextBlock x:Name="PageTitle" Text="Treeeeees" Margin="0,0,0,0" Style="{StaticResource PhoneTextTitle1Style}" Height="87" Width="436" />
         </StackPanel>
 
         <!--ContentPanel - place additional content here-->
-        <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
-            
+        <Grid x:Name="ContentPanel" Margin="0,136,0,0" Grid.RowSpan="2">
+            <my:Map Height="519" HorizontalAlignment="Left" Name="map1" VerticalAlignment="Top" Width="480" CredentialsProvider="Atvj6eBBbDS6-dL7shp9KmzY-0v0NL2ETYCFoHIDzQwK8_9bJ2ZdRgeMAj0sDs_F" />
+
+            <Button Content="Road Mode" Height="72" HorizontalAlignment="Left" Margin="24,525,0,0" Name="buttonRoad" VerticalAlignment="Top" Width="207" Click="buttonRoad_Click" />
+            <Button Content="Aerial Mode" Height="72" HorizontalAlignment="Left" Margin="261,525,0,0" Name="buttonAerial" VerticalAlignment="Top" Width="207" Click="buttonAerial_Click" />
+            <Button Content="Zoom In" Height="72" HorizontalAlignment="Left" Margin="24,586,0,0" Name="buttonZoomIn" VerticalAlignment="Top" Width="207" Click="buttonZoomIn_Click" />
+            <Button Content="Zoom Out" Height="72" HorizontalAlignment="Left" Margin="261,586,0,0" Name="buttonZoomOut" VerticalAlignment="Top" Width="207" Click="buttonZoomOut_Click" />
             <!--Create a single button to navigate to the second page which is rendered with the XNA Framework-->
-            <Button Height="100" Content="Change to game page" Click="Button_Click" />
-            
         </Grid>
     </Grid>
- 
+
     <!--Sample code showing usage of ApplicationBar-->
     <!--<phone:PhoneApplicationPage.ApplicationBar>
         <shell:ApplicationBar IsVisible="True" IsMenuEnabled="True">
