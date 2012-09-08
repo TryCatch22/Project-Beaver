@@ -24,7 +24,7 @@ namespace ProjectBeaver
 		{
 			InitializeComponent();
 
-            trees = Tree.ParseCsv("L2P_0_UCOUTGU_801_26062012_111306_GLC_3211912_VILLEMARIE.csv");
+            trees = Tree.ParseCsv("Data\\L2P_0_UCOUTGU_801_26062012_111306_GLC_3211912_VILLEMARIE.csv");
 
 			Map map = new Map();
 			map.CredentialsProvider = new ApplicationIdCredentialsProvider("Atvj6eBBbDS6-dL7shp9KmzY-0v0NL2ETYCFoHIDzQwK8_9bJ2ZdRgeMAj0sDs_F");
