@@ -11,6 +11,7 @@ using System.Windows.Media.Animation;
 using System.Windows.Shapes;
 using Microsoft.Phone.Controls;
 using Microsoft.Phone.Controls.Maps;
+using System.Device.Location;
 
 namespace ProjectBeaver
 {
@@ -20,36 +21,32 @@ namespace ProjectBeaver
 		public MainPage()
 		{
 			InitializeComponent();
+
+			Map map = new Map();
+			map.CredentialsProvider = new ApplicationIdCredentialsProvider("Atvj6eBBbDS6-dL7shp9KmzY-0v0NL2ETYCFoHIDzQwK8_9bJ2ZdRgeMAj0sDs_F");
+
+			// Set the center coordinate and zoom level
+			GeoCoordinate mapCenter = new GeoCoordinate(45.504693, -73.576494);
+			int zoom = 15;
+
+			// Create a pushpin to put at the center of the view
+			Pushpin pin1 = new Pushpin();
+			pin1.Location = mapCenter;
+			pin1.Content = "McGill University";
+			map.Children.Add(pin1);
+
+			// Set the map style to Aerial
+			map.Mode = new Microsoft.Phone.Controls.Maps.AerialMode();
+
+			// Set the view and put the map on the page
+			map.SetView(mapCenter, zoom);
+			ContentPanel.Children.Add(map);
 		}
 
 		// Simple button Click event handler to take us to the second page
 		private void Button_Click(object sender, RoutedEventArgs e)
 		{
 			NavigationService.Navigate(new Uri("/GamePage.xaml", UriKind.Relative));
-		}
-
-		private void buttonRoad_Click(object sender, RoutedEventArgs e)
-		{
-			map1.Mode = new RoadMode();
-		}
-		
-		private void buttonAerial_Click(object sender, RoutedEventArgs e)
-		{
-			map1.Mode = new AerialMode();
-		}
-
-		private void buttonZoomIn_Click(object sender, RoutedEventArgs e)
-		{
-			double zoom;
-			zoom = map1.ZoomLevel;
-			map1.ZoomLevel = ++zoom;
-		}
-
-		private void buttonZoomOut_Click(object sender, RoutedEventArgs e)
-		{
-			double zoom;
-			zoom = map1.ZoomLevel;
-			map1.ZoomLevel = --zoom;
-		}		
+		}	
 	}
 }

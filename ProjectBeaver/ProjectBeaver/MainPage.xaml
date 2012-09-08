@@ -28,12 +28,6 @@
 
         <!--ContentPanel - place additional content here-->
         <Grid x:Name="ContentPanel" Margin="0,136,0,0" Grid.RowSpan="2">
-            <my:Map Height="519" HorizontalAlignment="Left" Name="map1" VerticalAlignment="Top" Width="480" CredentialsProvider="Atvj6eBBbDS6-dL7shp9KmzY-0v0NL2ETYCFoHIDzQwK8_9bJ2ZdRgeMAj0sDs_F" />
-
-            <Button Content="Road Mode" Height="72" HorizontalAlignment="Left" Margin="24,525,0,0" Name="buttonRoad" VerticalAlignment="Top" Width="207" Click="buttonRoad_Click" />
-            <Button Content="Aerial Mode" Height="72" HorizontalAlignment="Left" Margin="261,525,0,0" Name="buttonAerial" VerticalAlignment="Top" Width="207" Click="buttonAerial_Click" />
-            <Button Content="Zoom In" Height="72" HorizontalAlignment="Left" Margin="24,586,0,0" Name="buttonZoomIn" VerticalAlignment="Top" Width="207" Click="buttonZoomIn_Click" />
-            <Button Content="Zoom Out" Height="72" HorizontalAlignment="Left" Margin="261,586,0,0" Name="buttonZoomOut" VerticalAlignment="Top" Width="207" Click="buttonZoomOut_Click" />
             <!--Create a single button to navigate to the second page which is rendered with the XNA Framework-->
         </Grid>
     </Grid>
